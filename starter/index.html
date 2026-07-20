@@ -1,0 +1,87 @@
+﻿<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <title>{{CLIENT_NAME}} &mdash; {{PRIMARY_SERVICE}}</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%23C6A15B'/%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='serif' font-size='18' fill='%23C6A15B'%3EC%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js')</script>
+  <script src="assets/js/site-config.js" defer></script>
+  <script src="assets/js/site.js" defer></script>
+</head>
+<body data-template-mode="true">
+  <a class="skip skip-link" href="#main">Skip to content</a>
+  <header class="site-header" id="header" data-motion-id="navigation-underline">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Client name home" data-content-token="[[CLIENT_NAME]]"><span class="brand-mark">C</span><span><b>CLIENT NAME</b><small>BUSINESS TYPE &middot; LOCATION</small></span></a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="#atelier">About</a><a href="#ritual">Experience</a><a href="#lookbook">Gallery</a><a href="#menu">Services</a><a href="#reviews">Reviews</a><a href="#location">Location</a>
+      </nav>
+      <div class="nav-actions"><button class="lang" type="button" aria-label="Change language">EN</button><a class="btn btn-solid nav-cta" href="#booking">Book now</a><button class="burger" type="button" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><i class="sr-only">Menu</i></button></div>
+    </div>
+  </header>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile"><a href="#atelier">About</a><a href="#ritual">Experience</a><a href="#lookbook">Gallery</a><a href="#menu">Services</a><a href="#reviews">Reviews</a><a href="#location">Location</a><a class="btn btn-solid" href="#booking">Book now</a></nav>
+
+  <main id="main">
+    <span id="top"></span>
+    <section class="hero">
+      <div class="hero-bg"><img src="assets/img-lux/facade.jpg" alt="Replace with approved client hero photograph"></div>
+      <div class="wrap hero-content">
+        <p class="label hero-label"><i></i>{{LOCATION}}<i></i></p>
+        <h1 data-content-token="[[CLIENT_NAME]]">CLIENT NAME</h1>
+        <p class="hero-tag">More than a service, a <em>ritual.</em></p>
+        <div class="hero-actions" data-motion-id="magnetic-button"><a class="btn btn-solid btn-lg" href="#booking">Book an appointment</a><a class="btn btn-lg" href="#atelier">Discover the atelier</a></div>
+        <div class="hero-meta"><span>&#9733; {{VERIFIED_RATING}} Google</span><span>{{OPENING_SUMMARY}}</span><span>{{LANGUAGES}}</span></div>
+      </div>
+      <a class="scroll-cue" href="#atelier"><span>Scroll</span><i></i></a>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div>Signature service &middot; Consultation &middot; Premium care &middot; Tailored finish &middot; Signature service &middot; Consultation &middot; Premium care &middot; Tailored finish &middot;</div></div>
+
+    <section class="section" id="atelier" data-motion-id="scroll-reveal-stagger"><div class="wrap story-grid">
+      <figure class="story-image reveal"><img src="assets/img-lux/interior-chair.jpg" alt="Replace with approved client interior photograph"><span></span><figcaption>EST. {{FOUNDING_YEAR}}</figcaption></figure>
+      <div class="story-copy"><p class="label reveal">The atelier</p><h2 class="reveal">A modern <em>classic.</em></h2><p class="lead reveal">{{APPROVED_BRAND_STORY}}</p><p class="reveal">Use this space for a verified description of the client&rsquo;s craft, process and customer experience. Every claim must be approved before release.</p><p class="signature reveal">&mdash; {{CLIENT_NAME}}</p><div class="stats reveal"><div><b>{{OPEN_DAYS}}</b><small>Open</small></div><div><b>{{VERIFIED_RATING}}</b><small>Google</small></div><div><b>{{LANGUAGE_COUNT}}</b><small>Languages</small></div></div></div>
+    </div></section>
+
+    <section class="section section-alt" id="ritual"><div class="wrap"><header class="section-head center reveal"><p class="label">Our signature ritual</p><h2>Four steps to <em>perfection</em></h2><p>Replace these steps with the client&rsquo;s approved service process.</p></header><ol class="ritual-grid">
+      <li class="reveal"><b>01</b><h3>Consult</h3><p>Understand goals, preferences and the right direction.</p></li><li class="reveal"><b>02</b><h3>Prepare</h3><p>Set the space, materials and customer expectations.</p></li><li class="reveal"><b>03</b><h3>Craft</h3><p>Deliver the core service with precision and care.</p></li><li class="reveal"><b>04</b><h3>Finish</h3><p>Refine every detail and explain the next steps.</p></li>
+    </ol></div></section>
+
+    <section class="section" id="lookbook" data-motion-id="image-zoom-overlay"><div class="wrap"><header class="section-head reveal"><p class="label">Lookbook</p><h2>A selection of our <em>work</em></h2><p>Replace all images and captions with approved client media.</p></header><div class="lookbook">
+      <figure class="look-a reveal"><img src="assets/img-lux/before-after.jpg" alt="Replace with client work"><figcaption><small>Signature</small>Before & after</figcaption></figure>
+      <figure class="look-b reveal"><img src="assets/img-lux/braids-plaque.jpg" alt="Replace with client work"><figcaption><small>Detail</small>Tailored result</figcaption></figure>
+      <figure class="look-c reveal"><img src="assets/img-lux/cut-detail.jpg" alt="Replace with client work"><figcaption><small>Craft</small>Precision finish</figcaption></figure>
+      <figure class="look-d reveal"><img src="assets/img-lux/barbers-at-work.jpg" alt="Replace with client work"><figcaption><small>Atelier</small>At work</figcaption></figure>
+      <figure class="look-e reveal"><img src="assets/img-lux/braids-kids.jpg" alt="Replace with client work"><figcaption><small>Care</small>For every guest</figcaption></figure>
+      <figure class="look-f reveal"><img src="assets/img-lux/chair-detail.jpg" alt="Replace with client work"><figcaption><small>Space</small>The details</figcaption></figure>
+    </div></div></section>
+
+    <section class="section section-alt" id="menu"><div class="wrap menu-grid"><div><header class="section-head reveal"><p class="label">Service menu</p><h2>Elegant and <em>transparent</em></h2></header><div class="price-list">
+      <div><span><b>{{SERVICE_1}}</b><small>{{SERVICE_1_DETAIL}}</small></span><i></i><strong>{{PRICE_1}}</strong></div><div><span><b>{{SERVICE_2}}</b><small>{{SERVICE_2_DETAIL}}</small></span><i></i><strong>{{PRICE_2}}</strong></div><div><span><b>{{SERVICE_3}}</b><small>{{SERVICE_3_DETAIL}}</small></span><i></i><strong>{{PRICE_3}}</strong></div><div><span><b>{{SERVICE_4}}</b><small>{{SERVICE_4_DETAIL}}</small></span><i></i><strong>{{PRICE_4}}</strong></div>
+      </div><p class="fine">Only publish verified services and prices.</p></div><aside class="booking-card reveal"><span class="brand-mark">C</span><h3>Reserve your place</h3><p>Limited appointments. Send a request and confirm directly with the client.</p><a class="btn btn-solid btn-block" href="#booking">Book now</a><small>{{PAYMENT_METHODS}} &middot; {{OPENING_SUMMARY}}</small></aside></div></section>
+
+    <section class="section" id="booking"><div class="wrap booking-grid"><figure class="booking-image reveal"><img src="assets/img-lux/interior-row.jpg" alt="Replace with approved booking section photograph"><figcaption><b>{{CLIENT_NAME}}</b><span>{{SHORT_ADDRESS}}</span></figcaption></figure><div class="booking-form reveal"><p class="label">Online booking</p><h2>Send an appointment request</h2><p>Complete the form and confirm through WhatsApp.</p><form id="booking-form" novalidate><label>Service<select id="service" required><option value="">Choose a service</option><option>{{SERVICE_1}}</option><option>{{SERVICE_2}}</option></select></label><div class="form-row"><label>Date<input id="date" type="date" required></label><label>Time<select id="time" required><option value="">Choose a time</option><option>10:00</option><option>12:00</option><option>15:00</option></select></label></div><label>Name<input id="name" required maxlength="80" placeholder="Your name"></label><label>Note<input id="note" maxlength="180" placeholder="Optional request"></label><p class="form-error" id="form-error" role="alert"></p><button class="btn btn-whatsapp btn-block btn-lg" type="submit">Send with WhatsApp</button><small>Your message opens in WhatsApp for final confirmation.</small></form></div></div></section>
+
+    <section class="section section-alt" id="reviews"><div class="wrap"><header class="section-head reveal"><p class="label">Customer reviews</p><h2>What our guests <em>say</em></h2></header><div class="review-summary"><strong>{{VERIFIED_RATING}}</strong><span>&#9733;&#9733;&#9733;&#9733;&#9733;<small>{{VERIFIED_REVIEW_COUNT}} verified Google reviews</small></span><a class="btn" href="#reviews" data-destination-token="[[REVIEW_URL]]">Write a review</a></div><div class="review-grid"><blockquote class="reveal">&ldquo;{{APPROVED_REVIEW_1}}&rdquo;<footer>{{REVIEWER_1}}</footer></blockquote><blockquote class="reveal">&ldquo;{{APPROVED_REVIEW_2}}&rdquo;<footer>{{REVIEWER_2}}</footer></blockquote><blockquote class="reveal">&ldquo;{{APPROVED_REVIEW_3}}&rdquo;<footer>{{REVIEWER_3}}</footer></blockquote></div></div></section>
+
+    <section class="section" id="location"><div class="wrap"><header class="section-head reveal"><p class="label">Location & contact</p><h2>Come and <em>visit us</em></h2><p>{{LOCATION_DESCRIPTION}}</p></header><div class="location-grid"><div class="map-placeholder reveal"><span>MAP</span><p>Replace with approved privacy-compliant map embed.</p></div><div class="contact-card reveal"><div><small>Address</small><p>{{FULL_ADDRESS}}</p></div><div><small>Telephone</small><p>{{PHONE_DISPLAY}}</p></div><div><small>Opening hours</small><p>{{OPENING_HOURS}}</p></div><a class="btn btn-solid btn-block" href="#location" data-destination-token="[[DIRECTIONS_URL]]" target="_blank" rel="noopener noreferrer">Get directions</a></div></div></div></section>
+
+    <section class="section section-alt instagram" id="instagram-media"><div class="wrap"><div class="instagram-head"><div><b>@{{INSTAGRAM_HANDLE}}</b><small>Latest work and inspiration</small></div><a class="btn btn-solid" href="#instagram-media" data-destination-token="[[INSTAGRAM_URL]]" target="_blank" rel="noopener noreferrer">Follow on Instagram</a></div><div class="instagram-grid"><img src="assets/img-lux/before-after.jpg" alt="Replace with Instagram media"><img src="assets/img-lux/cut-detail.jpg" alt="Replace with Instagram media"><img src="assets/img-lux/braids-plaque.jpg" alt="Replace with Instagram media"><img src="assets/img-lux/braids-kids.jpg" alt="Replace with Instagram media"><img src="assets/img-lux/barbers-at-work.jpg" alt="Replace with Instagram media"><img src="assets/img-lux/wash-station.jpg" alt="Replace with Instagram media"></div></div></section>
+
+    <section class="reserve"><img src="assets/img-lux/barbers-at-work.jpg" alt="Replace with approved closing call-to-action image"><div class="wrap"><p class="label">Appointment</p><h2>Your turn <em>starts here.</em></h2><p>{{APPROVED_FINAL_CTA_COPY}}</p><div><a class="btn btn-solid btn-lg" href="#booking">Book via WhatsApp</a><a class="btn btn-lg" href="#location" data-destination-token="[[DIRECTIONS_URL]]">Directions</a></div></div></section>
+  </main>
+
+  <footer class="footer"><div class="wrap footer-grid"><div><a class="brand" href="#top"><span class="brand-mark">C</span><span><b>{{CLIENT_NAME}}</b><small>{{BUSINESS_TYPE}} &middot; {{LOCATION}}</small></span></a><p>{{APPROVED_FOOTER_DESCRIPTION}}</p></div><div><h3>Menu</h3><a href="#atelier">About</a><a href="#lookbook">Gallery</a><a href="#menu">Services</a><a href="#location">Location</a></div><div><h3>Contact</h3><p>{{PHONE_DISPLAY}}</p><p>{{SHORT_ADDRESS}}</p></div></div><div class="wrap footer-bottom"><span>&copy; <span id="year"></span> {{CLIENT_NAME}}</span><span><a href="imprint.html">Imprint</a> &middot; <a href="privacy.html">Privacy</a></span></div></footer>
+  <div class="floating"><button type="button" id="chat-button" aria-label="Open contact panel">&#10022;</button><a id="whatsapp-fab" href="#booking" aria-label="Book through WhatsApp">WA</a></div>
+  <script type="application/json" id="motion-manifest">
+    {"source_id":"local-web-animation-reference-v1","rules_version":"agent14-motion-v3","sha256":"F28DF5A11EB63DA355111BF8E22E0C9D8575FDD9DD35F85BDD54FC01058A50E5","primary":"scroll-reveal-stagger","supporting":["navigation-underline","image-zoom-overlay","magnetic-button"]}
+  </script>
+</body>
+</html>
+

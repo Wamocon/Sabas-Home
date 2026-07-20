@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Story media placeholder</title>
+  <desc id="desc">Replace this file with approved client story media before release.</desc>
+  <rect width="900" height="1100" fill="#20211f"/>
+  <rect x="80" y="80" width="740" height="940" fill="#353631" stroke="#c27045" stroke-width="2" stroke-dasharray="10 12"/>
+  <path d="M80 860 330 530l170 190 140-135 180 220v215H80Z" fill="#55564e"/>
+  <text x="115" y="145" fill="#f4f0e9" font-family="Arial, sans-serif" font-size="24">REPLACE WITH APPROVED STORY MEDIA</text>
+</svg>

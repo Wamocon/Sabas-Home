@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">Hero media placeholder</title>
+  <desc id="desc">Replace this file with approved client media before release.</desc>
+  <rect width="1200" height="900" fill="#d8d1c4"/>
+  <path d="M0 700 380 360l180 160 170-205 470 385v200H0Z" fill="#b8ab98"/>
+  <circle cx="880" cy="250" r="115" fill="#e9e3d9"/>
+  <rect x="70" y="70" width="1060" height="760" fill="none" stroke="#554c43" stroke-width="2" stroke-dasharray="10 12"/>
+  <text x="100" y="130" fill="#302b27" font-family="Arial, sans-serif" font-size="28">REPLACE WITH APPROVED CLIENT HERO MEDIA</text>
+</svg>

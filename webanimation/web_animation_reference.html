@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Animation Techniques - Reference Sheet</title>
+    <!--
+      AGENT 14: MOTION EXPERIENCE DIRECTOR
+
+      This file is the sole approved motion reference for generated homepages.
+      Do not browse, cite, or invent an external animation source. Read the
+      machine-readable catalog below, select patterns that fit the verified
+      business content, and inspect the matching CSS and JavaScript anchors in
+      this file before defining the motion blueprint.
+
+      Selection rules:
+      1. Select one primary pattern plus two to four supporting patterns.
+      2. Every pattern must help hierarchy, comprehension, navigation, media,
+         or conversion. Decorative motion without a purpose is rejected.
+      3. Adapt color, scale, timing, density, and composition to the business.
+         Do not copy this demo page's layout, wording, dark palette, or sample
+         content into a client homepage.
+      4. Use approved client images only. Animation never authorizes another
+         image, logo, icon, claim, service, price, or source.
+      5. Keep hero identity and the primary action visible before JavaScript.
+         Scroll reveals may enhance later sections but cannot hide content if
+         JavaScript fails.
+      6. Keep the native cursor. The cursor follower is allowed only when the
+         client explicitly requests experimental pointer motion and the device
+         has a fine pointer. Never use a literal trade tool as a cursor.
+      7. Avoid glitch, scramble, marquee, and loading-screen patterns for
+         conservative, medical, legal, financial, or accessibility-sensitive
+         sites unless the user explicitly requests that expressive direction.
+      8. Use restrained reveals, navigation feedback, image focus, and button
+         response for most local service businesses. Use parallax, marquee,
+         morphing, or kinetic type only when content and brand justify them.
+      9. Animate transform, opacity, clip-path, or custom properties. Avoid
+         layout shift. Throttle pointer and scroll work with animation frames,
+         pause continuous motion while the document is hidden, and implement a
+         complete prefers-reduced-motion fallback.
+      10. Record the exact selected pattern IDs, this file's public URL, and its
+          content hash in release provenance. Never claim an unselected pattern
+          or an external website was used.
+
+      Context guide:
+      - Local services, salons, restaurants, and wellness: scroll reveal,
+        line-by-line text, image zoom, magnetic CTA, nav underline, restrained
+        floating shapes.
+      - Portfolios, agencies, fashion, and entertainment: kinetic type,
+        staggered grids, marquee, gradient motion, or carefully gated glitch.
+      - SaaS, technology, and product storytelling: scroll progress, parallax,
+        staggered cards, gradient motion, and responsive CTA feedback.
+      - Editorial, professional, architecture, and premium retail: line reveal,
+        subtle parallax, image focus, nav underline, and measured card depth.
+    -->
+    <script type="application/json" id="agent14-motion-catalog">
+    {
+      "source_id": "local-web-animation-reference-v1",
+      "source_scope": "sole-motion-reference",
+      "title": "Local Web Animation Reference",
+      "rules_version": "agent14-motion-v3",
+      "patterns": [
+        {
+          "id": "floating-geometric-shapes",
+          "name": "Floating geometric brand shapes",
+          "family": "liquid-morph",
+          "hook": "ambient-brand-object",
+          "best_for": ["agency", "creative", "barber_salon", "restaurant", "wellness", "technology", "saas", "general"],
+          "purpose": "Add low-contrast brand atmosphere behind real content without becoming a literal industry icon.",
+          "anchors": [".hero-bg-shapes", ".shape", "@keyframes float"],
+          "implementation": "Keep shapes behind content, use brand colors at low opacity, and move only transform or border radius."
+        },
+        {
+          "id": "hero-text-scramble-3d",
+          "name": "Hero text scramble and 3D character response",
+          "family": "kinetic-type",
+          "hook": "kinetic-heading",
+          "best_for": ["agency", "creative", "technology", "entertainment", "fashion"],
+          "purpose": "Create an expressive identity entrance for a short verified headline.",
+          "anchors": [".hero h1 span", ".scramble-text", "class TextScramble"],
+          "implementation": "Use on one short phrase only, preserve readable final text, and disable cycling for reduced motion.",
+          "requires_expressive_brand": true
+        },
+        {
+          "id": "scroll-reveal-stagger",
+          "name": "Scroll-triggered reveal with stagger",
+          "family": "restrained-editorial",
+          "hook": "section-focus",
+          "best_for": ["professional", "wellness", "barber_salon", "restaurant", "agency", "technology", "saas", "architecture", "general"],
+          "purpose": "Reveal hierarchy in reading order while keeping the no-JavaScript page complete.",
+          "anchors": [".reveal", ".reveal.active", "revealObserver"],
+          "implementation": "Show the hero immediately, observe later sections, unobserve after entry, and reveal everything for reduced motion."
+        },
+        {
+          "id": "parallax-depth",
+          "name": "Restrained parallax depth",
+          "family": "cinematic-focus",
+          "hook": "media-depth",
+          "best_for": ["barber_salon", "restaurant", "hospitality", "architecture", "automotive", "technology", "creative", "general"],
+          "purpose": "Give one approved high-resolution media region controlled spatial depth.",
+          "anchors": [".parallax-container", ".parallax-bg", "parallaxBg"],
+          "implementation": "Apply to one bounded media layer, clamp movement, update through requestAnimationFrame, and turn it off for reduced motion.",
+          "requires_high_resolution_media": true
+        },
+        {
+          "id": "three-dimensional-cards",
+          "name": "3D hover cards",
+          "family": "responsive-character",
+          "hook": "service-response",
+          "best_for": ["agency", "technology", "saas", "retail", "restaurant", "barber_salon", "general"],
+          "purpose": "Confirm focus or hover on a small set of useful service or product choices.",
+          "anchors": [".card-3d", ".card-3d:hover"],
+          "implementation": "Keep rotation subtle, mirror hover with focus-visible, and never make a whole non-action card look clickable."
+        },
+        {
+          "id": "infinite-marquee",
+          "name": "Infinite marquee",
+          "family": "kinetic-type",
+          "hook": "kinetic-strip",
+          "best_for": ["creative", "fashion", "entertainment", "agency"],
+          "purpose": "Create one expressive rhythm strip from short verified words or service categories.",
+          "anchors": [".marquee-track", ".marquee-item", "@keyframes marquee"],
+          "implementation": "Duplicate only the visual track, pause on hover and focus, hide the duplicate from assistive technology, and stop for reduced motion.",
+          "requires_expressive_brand": true
+        },
+        {
+          "id": "staggered-grid",
+          "name": "Staggered media or service grid",
+          "family": "staggered-grid",
+          "hook": "staggered-grid",
+          "best_for": ["portfolio", "agency", "creative", "barber_salon", "restaurant", "retail", "technology", "general"],
+          "purpose": "Sequence approved gallery media or service cards without delaying access to their content.",
+          "anchors": [".stagger-grid", ".stagger-item", "staggerObserver"],
+          "implementation": "Use DOM order, cap delays, preserve content dimensions, and set all items visible when reduced motion is enabled."
+        },
+        {
+          "id": "loading-entrance",
+          "name": "Loading entrance",
+          "family": "guided-story",
+          "hook": "page-entrance",
+          "best_for": ["creative", "entertainment", "portfolio"],
+          "purpose": "Mask a genuinely necessary initialization period for an immersive experience.",
+          "anchors": [".loader-overlay", ".loader-text", "loaderBounce"],
+          "implementation": "Use only for real initialization, include a timeout escape, remove it for reduced motion, and never delay an ordinary service homepage.",
+          "requires_real_initialization": true
+        },
+        {
+          "id": "scroll-progress",
+          "name": "Scroll progress indicator",
+          "family": "guided-story",
+          "hook": "scroll-progress",
+          "best_for": ["editorial", "professional", "architecture", "technology", "saas", "creative", "general"],
+          "purpose": "Show position in a long narrative or detailed service page.",
+          "anchors": [".scroll-progress", "scrollProgress"],
+          "implementation": "Update a transform or custom property through requestAnimationFrame and hide it when the page is too short."
+        },
+        {
+          "id": "navigation-underline",
+          "name": "Navigation underline feedback",
+          "family": "restrained-editorial",
+          "hook": "navigation-response",
+          "best_for": ["professional", "wellness", "barber_salon", "restaurant", "agency", "technology", "saas", "architecture", "general"],
+          "purpose": "Confirm navigation hover and keyboard focus without moving surrounding layout.",
+          "anchors": [".nav-links a::after", ".nav-links a:hover::after"],
+          "implementation": "Apply the same feedback to focus-visible and keep the underline within the link box."
+        },
+        {
+          "id": "magnetic-button",
+          "name": "Magnetic primary button",
+          "family": "responsive-character",
+          "hook": "primary-action-response",
+          "best_for": ["agency", "creative", "barber_salon", "restaurant", "retail", "technology", "saas", "general"],
+          "purpose": "Give one primary action restrained pointer feedback while keeping the control predictable.",
+          "anchors": [".btn-magnetic", "magneticBtn"],
+          "implementation": "Enable only on fine pointers, clamp translation to a few pixels, reset on leave, and keep keyboard behavior unchanged."
+        },
+        {
+          "id": "line-by-line-text",
+          "name": "Line-by-line text reveal",
+          "family": "restrained-editorial",
+          "hook": "editorial-wipe",
+          "best_for": ["professional", "wellness", "barber_salon", "restaurant", "agency", "architecture", "retail", "general"],
+          "purpose": "Give a short source-grounded statement measured editorial pacing.",
+          "anchors": [".text-reveal-lines", ".text-reveal-lines.active", "textRevealObserver"],
+          "implementation": "Split only authored visual lines, preserve a normal reading-order string for assistive technology, and reveal immediately without JavaScript."
+        },
+        {
+          "id": "glitch-text",
+          "name": "Glitch text accent",
+          "family": "kinetic-type",
+          "hook": "glitch-accent",
+          "best_for": ["creative", "entertainment", "technology"],
+          "purpose": "Add a brief experimental accent to one short decorative label.",
+          "anchors": [".glitch-text", "glitch-anim", "glitch-anim2"],
+          "implementation": "Never apply it to essential information, stop after a brief cycle, and disable it for reduced motion.",
+          "requires_expressive_brand": true
+        },
+        {
+          "id": "animated-gradient-text",
+          "name": "Animated gradient text",
+          "family": "liquid-morph",
+          "hook": "gradient-accent",
+          "best_for": ["agency", "creative", "technology", "saas", "fashion", "general"],
+          "purpose": "Create a controlled brand-color accent on one concise phrase.",
+          "anchors": [".gradient-text", "gradientShift"],
+          "implementation": "Maintain contrast, use verified brand colors, keep body copy static, and freeze the gradient for reduced motion."
+        },
+        {
+          "id": "image-zoom-overlay",
+          "name": "Image zoom and overlay focus",
+          "family": "cinematic-focus",
+          "hook": "media-focus",
+          "best_for": ["barber_salon", "restaurant", "hospitality", "retail", "portfolio", "architecture", "creative", "general"],
+          "purpose": "Focus attention on approved high-resolution photography and reveal a useful caption or action.",
+          "anchors": [".img-hover-zoom", ".img-hover-zoom .overlay"],
+          "implementation": "Use only approved imagery, preserve aspect ratio, expose caption content without hover, and mirror interaction for keyboard focus.",
+          "requires_high_resolution_media": true
+        },
+        {
+          "id": "custom-cursor-follower",
+          "name": "Custom cursor follower accent",
+          "family": "cursor-depth",
+          "hook": "pointer-accent",
+          "best_for": ["creative", "entertainment", "portfolio"],
+          "purpose": "Add an optional abstract pointer accent for an explicitly experimental brand direction.",
+          "anchors": [".cursor-follower", "animateCursor"],
+          "implementation": "Never hide the native cursor, enable only for fine pointers, keep it decorative, and remove it for reduced motion or touch.",
+          "requires_explicit_client_request": true
+        }
+      ]
+    }
+    </script>
+    <style>
+        /* ============================================
+           0. BASE SETUP & CSS VARIABLES
+           ============================================ */
+        :root {
+            --bg: #0a0a0a;
+            --surface: #141414;
+            --text: #f0f0f0;
+            --text-muted: #888;
+            --accent: #ff6b6b;
+            --accent-2: #4ecdc4;
+            --accent-3: #ffe66d;
+            --transition-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-bounce: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           1. CUSTOM CURSOR FOLLOWER
+           (Seen on: Unseen Studio, Lusion)
+           ============================================ */
+        .cursor-follower {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.15s var(--transition-smooth),
+                        width 0.3s var(--transition-smooth),
+                        height 0.3s var(--transition-smooth),
+                        background 0.3s;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: difference;
+        }
+
+        .cursor-follower.hovering {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 107, 107, 0.2);
+        }
+
+        /* ============================================
+           2. HERO SECTION - TEXT SCRAMBLE + 3D
+           (Seen on: Epic, BDSN Club)
+           ============================================ */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            perspective: 1000px;
+            overflow: hidden;
+        }
+
+        .hero-bg-shapes {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        /* Floating geometric shapes - pure CSS animation */
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 20s infinite ease-in-out;
+        }
+
+        .shape:nth-child(1) {
+            width: 300px;
+            height: 300px;
+            border: 2px solid var(--accent);
+            border-radius: 50%;
+            top: 10%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 200px;
+            height: 200px;
+            border: 2px solid var(--accent-2);
+            top: 60%;
+            right: 15%;
+            transform: rotate(45deg);
+            animation-delay: -5s;
+        }
+
+        .shape:nth-child(3) {
+            width: 150px;
+            height: 150px;
+            background: var(--accent-3);
+            border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+            bottom: 20%;
+            left: 30%;
+            animation-delay: -10s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(30px, -30px) rotate(5deg); }
+            50% { transform: translate(-20px, 20px) rotate(-5deg); }
+            75% { transform: translate(20px, 30px) rotate(3deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 8vw, 7rem);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        /* 3D text effect on hover */
+        .hero h1 span {
+            display: inline-block;
+            transition: transform 0.5s var(--transition-smooth);
+            transform-style: preserve-3d;
+        }
+
+        .hero h1:hover span {
+            transform: rotateX(360deg);
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        /* Scramble text effect container */
+        .scramble-text {
+            font-family: 'Courier New', monospace;
+            color: var(--accent-2);
+            font-size: 1.1rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* ============================================
+           3. SCROLL-TRIGGERED REVEALS
+           (Seen on: Apple, Uncommon Studio, Active Theory)
+           ============================================ */
+        .section {
+            padding: 8rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 4rem);
+            margin-bottom: 3rem;
+            overflow: hidden;
+        }
+
+        /* The animation class - add this via JS when element enters viewport */
+        .reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: opacity 0.8s var(--transition-smooth),
+                        transform 0.8s var(--transition-smooth);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered children - add delay via inline style or nth-child */
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ============================================
+           4. PARALLAX SCROLLING
+           (Seen on: Apple product pages, Lusion)
+           ============================================ */
+        .parallax-container {
+            position: relative;
+            height: 60vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 4rem 0;
+            border-radius: 20px;
+        }
+
+        .parallax-bg {
+            position: absolute;
+            inset: -20%;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            /* JS will translate this on scroll for parallax effect */
+            will-change: transform;
+        }
+
+        .parallax-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .parallax-content h2 {
+            font-size: 3rem;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+
+        /* ============================================
+           5. 3D CARD FLIP / HOVER TRANSFORM
+           (Seen on: Rive, Dropbox Brand)
+           ============================================ */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .card-3d {
+            background: var(--surface);
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.5s var(--transition-smooth),
+                        box-shadow 0.5s var(--transition-smooth);
+            cursor: pointer;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .card-3d:hover {
+            transform: translateY(-10px) rotateX(5deg);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.4),
+                        0 0 0 1px rgba(255,255,255,0.1);
+        }
+
+        .card-3d::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 16px;
+            background: linear-gradient(135deg, 
+                rgba(255,107,107,0.1) 0%, 
+                transparent 50%, 
+                rgba(78,205,196,0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.5s;
+            pointer-events: none;
+        }
+
+        .card-3d:hover::before {
+            opacity: 1;
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+            transition: transform 0.3s var(--transition-bounce);
+        }
+
+        .card-3d:hover .card-icon {
+            transform: scale(1.2) rotate(-10deg);
+        }
+
+        .card-3d h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-3d p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* ============================================
+           6. INFINITE MARQUEE / TEXT SCROLL
+           (Seen on: Epic, BDSN Club)
+           ============================================ */
+        .marquee-section {
+            overflow: hidden;
+            padding: 3rem 0;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            margin: 4rem 0;
+        }
+
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            animation: marquee 20s linear infinite;
+        }
+
+        .marquee-track:hover {
+            animation-play-state: paused;
+        }
+
+        .marquee-item {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 800;
+            padding: 0 3rem;
+            white-space: nowrap;
+            color: transparent;
+            -webkit-text-stroke: 1px var(--text-muted);
+            transition: color 0.3s, -webkit-text-stroke 0.3s;
+        }
+
+        .marquee-item:hover {
+            color: var(--text);
+            -webkit-text-stroke: 1px var(--text);
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* ============================================
+           7. STAGGERED GRID REVEAL
+           (Seen on: Uncommon Studio, Active Theory)
+           ============================================ */
+        .stagger-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .stagger-item {
+            aspect-ratio: 4/3;
+            background: var(--surface);
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            opacity: 0;
+            transform: scale(0.8) translateY(40px);
+            transition: all 0.6s var(--transition-smooth);
+            cursor: pointer;
+        }
+
+        .stagger-item.active {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+
+        .stagger-item:hover {
+            transform: scale(1.05) translateY(-5px);
+            z-index: 10;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+        }
+
+        .stagger-item::after {
+            content: attr(data-label);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            font-weight: 600;
+            transform: translateY(100%);
+            transition: transform 0.3s var(--transition-smooth);
+        }
+
+        .stagger-item:hover::after {
+            transform: translateY(0);
+        }
+
+        /* Color variations for visual interest */
+        .stagger-item:nth-child(3n+1) { background: linear-gradient(135deg, #1a1a2e, #16213e); }
+        .stagger-item:nth-child(3n+2) { background: linear-gradient(135deg, #0f3460, #533483); }
+        .stagger-item:nth-child(3n+3) { background: linear-gradient(135deg, #1b1b2f, #1f4068); }
+
+        /* ============================================
+           8. LOADING / ENTRANCE ANIMATIONS
+           (Seen on: Epic, Rive)
+           ============================================ */
+        .loader-overlay {
+            position: fixed;
+            inset: 0;
+            background: var(--bg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10000;
+            transition: opacity 0.8s var(--transition-smooth),
+                        visibility 0.8s;
+        }
+
+        .loader-overlay.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-text {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: 0.2em;
+        }
+
+        .loader-text span {
+            display: inline-block;
+            animation: loaderBounce 1.4s infinite ease-in-out both;
+        }
+
+        .loader-text span:nth-child(1) { animation-delay: -0.32s; }
+        .loader-text span:nth-child(2) { animation-delay: -0.16s; }
+        .loader-text span:nth-child(3) { animation-delay: 0s; }
+        .loader-text span:nth-child(4) { animation-delay: 0.16s; }
+        .loader-text span:nth-child(5) { animation-delay: 0.32s; }
+        .loader-text span:nth-child(6) { animation-delay: 0.48s; }
+        .loader-text span:nth-child(7) { animation-delay: 0.64s; }
+
+        @keyframes loaderBounce {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+
+        /* ============================================
+           9. SMOOTH SCROLL PROGRESS INDICATOR
+           (Seen on: Apple, Active Theory)
+           ============================================ */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3));
+            z-index: 9998;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+
+        /* ============================================
+           10. NAVIGATION - HOVER UNDERLINE EFFECT
+           (Seen on: Eszter Bial, Unseen Studio)
+           ============================================ */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 1.5rem 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: rgba(10, 10, 10, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            transition: padding 0.3s, background 0.3s;
+        }
+
+        nav.scrolled {
+            padding: 1rem 3rem;
+            background: rgba(10, 10, 10, 0.95);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        /* Animated underline */
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s var(--transition-smooth);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        /* ============================================
+           11. MAGNETIC BUTTON EFFECT
+           (Seen on: Rive, Active Theory)
+           ============================================ */
+        .btn-magnetic {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--accent);
+            color: #fff;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.3s var(--transition-smooth),
+                        box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-magnetic:hover {
+            box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+        }
+
+        /* ============================================
+           12. TEXT REVEAL - LINE BY LINE
+           (Seen on: Epic, Apple)
+           ============================================ */
+        .text-reveal-lines {
+            overflow: hidden;
+        }
+
+        .text-reveal-lines .line {
+            display: block;
+            transform: translateY(100%);
+            opacity: 0;
+            transition: transform 0.8s var(--transition-smooth),
+                        opacity 0.8s;
+        }
+
+        .text-reveal-lines.active .line {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .text-reveal-lines .line:nth-child(1) { transition-delay: 0s; }
+        .text-reveal-lines .line:nth-child(2) { transition-delay: 0.15s; }
+        .text-reveal-lines .line:nth-child(3) { transition-delay: 0.3s; }
+
+        /* ============================================
+           13. GLITCH TEXT EFFECT
+           (Seen on: BDSN Club, experimental sites)
+           ============================================ */
+        .glitch-text {
+            position: relative;
+            display: inline-block;
+        }
+
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -2px 0 var(--accent);
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: -2px 0 var(--accent-2);
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim2 5s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% { clip: rect(12px, 9999px, 52px, 0); }
+            20% { clip: rect(58px, 9999px, 12px, 0); }
+            40% { clip: rect(12px, 9999px, 85px, 0); }
+            60% { clip: rect(92px, 9999px, 35px, 0); }
+            80% { clip: rect(25px, 9999px, 68px, 0); }
+            100% { clip: rect(72px, 9999px, 15px, 0); }
+        }
+
+        @keyframes glitch-anim2 {
+            0% { clip: rect(65px, 9999px, 25px, 0); }
+            20% { clip: rect(15px, 9999px, 85px, 0); }
+            40% { clip: rect(45px, 9999px, 15px, 0); }
+            60% { clip: rect(85px, 9999px, 55px, 0); }
+            80% { clip: rect(35px, 9999px, 95px, 0); }
+            100% { clip: rect(15px, 9999px, 45px, 0); }
+        }
+
+        /* ============================================
+           14. GRADIENT TEXT ANIMATION
+           (Seen on: Rive, modern SaaS sites)
+           ============================================ */
+        .gradient-text {
+            background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--accent-3), var(--accent));
+            background-size: 300% 100%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 4s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* ============================================
+           15. HOVER IMAGE ZOOM + OVERLAY
+           (Seen on: Uncommon Studio, Eszter Bial)
+           ============================================ */
+        .img-hover-zoom {
+            overflow: hidden;
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .img-hover-zoom img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s var(--transition-smooth);
+        }
+
+        .img-hover-zoom:hover img {
+            transform: scale(1.1);
+        }
+
+        .img-hover-zoom .overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            opacity: 0;
+            transition: opacity 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .img-hover-zoom:hover .overlay {
+            opacity: 1;
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 768px) {
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-links {
+                display: none;
+            }
+            .cursor-follower {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- LOADING SCREEN -->
+    <div class="loader-overlay" id="loader">
+        <div class="loader-text">
+            <span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span>
+        </div>
+    </div>
+
+    <!-- SCROLL PROGRESS BAR -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor-follower" id="cursor"></div>
+
+    <!-- NAVIGATION -->
+    <nav id="navbar">
+        <div style="font-weight: 800; font-size: 1.2rem;">ANIMATION<span style="color: var(--accent);">.</span>REF</div>
+        <ul class="nav-links">
+            <li><a href="#reveal">Scroll Reveal</a></li>
+            <li><a href="#parallax">Parallax</a></li>
+            <li><a href="#cards">3D Cards</a></li>
+            <li><a href="#grid">Stagger Grid</a></li>
+        </ul>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-bg-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="hero-content">
+            <h1>
+                <span>W</span><span>e</span><span>b</span>
+                <span> </span>
+                <span>A</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span>
+            </h1>
+            <p class="hero-subtitle">A complete reference sheet of modern CSS & JavaScript animation techniques used by top studios.</p>
+            <div class="scramble-text" id="scramble">INITIALIZING...</div>
+            <br><br>
+            <a href="#reveal" class="btn-magnetic" id="heroBtn">Explore Techniques</a>
+        </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-section">
+        <div class="marquee-track">
+            <span class="marquee-item">SCROLL REVEALS</span>
+            <span class="marquee-item">3D TRANSFORMS</span>
+            <span class="marquee-item">PARALLAX</span>
+            <span class="marquee-item">STAGGERED GRIDS</span>
+            <span class="marquee-item">CUSTOM CURSOR</span>
+            <span class="marquee-item">TEXT SCRAMBLE</span>
+            <span class="marquee-item">HOVER EFFECTS</span>
+            <span class="marquee-item">LOADING ANIMATIONS</span>
+            <!-- Duplicate for seamless loop -->
+            <span class="marquee-item">SCROLL REVEALS</span>
+            <span class="marquee-item">3D TRANSFORMS</span>
+            <span class="marquee-item">PARALLAX</span>
+            <span class="marquee-item">STAGGERED GRIDS</span>
+            <span class="marquee-item">CUSTOM CURSOR</span>
+            <span class="marquee-item">TEXT SCRAMBLE</span>
+            <span class="marquee-item">HOVER EFFECTS</span>
+            <span class="marquee-item">LOADING ANIMATIONS</span>
+        </div>
+    </div>
+
+    <!-- SCROLL-TRIGGERED REVEALS SECTION -->
+    <section class="section" id="reveal">
+        <div class="text-reveal-lines" id="textRevealLines">
+            <span class="line">Technique 01</span>
+            <span class="line gradient-text" style="font-size: 2.5rem; font-weight: 800;">Scroll-Triggered Reveals</span>
+            <span class="line" style="color: var(--text-muted); margin-top: 1rem;">Elements fade and slide in as they enter the viewport</span>
+        </div>
+
+        <div class="card-grid" style="margin-top: 4rem;">
+            <div class="card-3d reveal reveal-delay-1">
+                <div class="card-icon">✦</div>
+                <h3>Intersection Observer</h3>
+                <p>Use the native IntersectionObserver API to detect when elements enter the viewport. Add an "active" class to trigger CSS transitions.</p>
+            </div>
+            <div class="card-3d reveal reveal-delay-2">
+                <div class="card-icon">◈</div>
+                <h3>CSS Transitions</h3>
+                <p>Define initial state (opacity: 0, transform: translateY) and final state (opacity: 1, transform: none). Let CSS handle the interpolation.</p>
+            </div>
+            <div class="card-3d reveal reveal-delay-3">
+                <div class="card-icon">◇</div>
+                <h3>Stagger Delays</h3>
+                <p>Use transition-delay on child elements to create a cascading reveal effect. Increases visual rhythm and perceived performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARALLAX SECTION -->
+    <section class="section" id="parallax">
+        <h2 class="section-title reveal">Technique 02 - Parallax Scrolling</h2>
+        <p class="reveal" style="color: var(--text-muted); max-width: 600px; margin-bottom: 2rem;">
+            Background layers move at different speeds than foreground content. Creates depth and immersion.
+        </p>
+
+        <div class="parallax-container reveal">
+            <div class="parallax-bg" id="parallaxBg"></div>
+            <div class="parallax-content">
+                <h2>Parallax Layer</h2>
+                <p>JS translates background at 0.5x scroll speed</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3D CARDS SECTION -->
+    <section class="section" id="cards">
+        <h2 class="section-title reveal">Technique 03 - 3D Hover Cards</h2>
+        <p class="reveal" style="color: var(--text-muted); margin-bottom: 2rem;">
+            Cards lift and rotate on hover using CSS 3D transforms. Perspective is set on the parent container.
+        </p>
+
+        <div class="card-grid">
+            <div class="card-3d reveal reveal-delay-1">
+                <div class="card-icon">🎨</div>
+                <h3>preserve-3d</h3>
+                <p>Set transform-style: preserve-3d on parent and child elements. This allows nested 3D transforms to compound correctly.</p>
+            </div>
+            <div class="card-3d reveal reveal-delay-2">
+                <div class="card-icon">🔮</div>
+                <h3>perspective</h3>
+                <p>Apply perspective: 1000px to the parent container. Lower values = more dramatic 3D effect. Higher = subtler.</p>
+            </div>
+            <div class="card-3d reveal reveal-delay-3">
+                <div class="card-icon">✨</div>
+                <h3>rotateX / rotateY</h3>
+                <p>On hover, apply rotateX(5deg) and translateY(-10px). Combine with box-shadow for realistic depth perception.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- STAGGERED GRID SECTION -->
+    <section class="section" id="grid">
+        <h2 class="section-title reveal">
+            <span class="glitch-text" data-text="Technique 04">Technique 04</span> - Staggered Grid
+        </h2>
+        <p class="reveal" style="color: var(--text-muted); margin-bottom: 2rem;">
+            Grid items animate in one by one with increasing delays. Creates a wave-like entrance effect.
+        </p>
+
+        <div class="stagger-grid" id="staggerGrid">
+            <div class="stagger-item" data-label="Project 01" style="transition-delay: 0.05s;"></div>
+            <div class="stagger-item" data-label="Project 02" style="transition-delay: 0.1s;"></div>
+            <div class="stagger-item" data-label="Project 03" style="transition-delay: 0.15s;"></div>
+            <div class="stagger-item" data-label="Project 04" style="transition-delay: 0.2s;"></div>
+            <div class="stagger-item" data-label="Project 05" style="transition-delay: 0.25s;"></div>
+            <div class="stagger-item" data-label="Project 06" style="transition-delay: 0.3s;"></div>
+            <div class="stagger-item" data-label="Project 07" style="transition-delay: 0.35s;"></div>
+            <div class="stagger-item" data-label="Project 08" style="transition-delay: 0.4s;"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer style="text-align: center; padding: 4rem 2rem; border-top: 1px solid rgba(255,255,255,0.1); color: var(--text-muted);">
+        <p>Copy any technique above. All CSS & JS is embedded and commented.</p>
+        <p style="margin-top: 1rem; font-size: 0.85rem;">Built for AI workflows - every animation is explained in code.</p>
+    </footer>
+
+    <script>
+        // ============================================
+        // 1. LOADING SCREEN - fade out after load
+        // ============================================
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 1500);
+        });
+
+        // ============================================
+        // 2. SCROLL PROGRESS BAR
+        // ============================================
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+        });
+
+        // ============================================
+        // 3. NAVBAR BACKGROUND ON SCROLL
+        // ============================================
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // ============================================
+        // 4. CUSTOM CURSOR FOLLOWER
+        // Move cursor div to mouse position with slight lag
+        // ============================================
+        const cursor = document.getElementById('cursor');
+        let mouseX = 0, mouseY = 0;
+        let cursorX = 0, cursorY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        // Smooth follow animation using requestAnimationFrame
+        function animateCursor() {
+            // Lerp (linear interpolation) for smooth trailing
+            cursorX += (mouseX - cursorX) * 0.15;
+            cursorY += (mouseY - cursorY) * 0.15;
+            cursor.style.left = cursorX + 'px';
+            cursor.style.top = cursorY + 'px';
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // Expand cursor on interactive elements
+        document.querySelectorAll('a, button, .card-3d, .stagger-item').forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
+        });
+
+        // ============================================
+        // 5. TEXT SCRAMBLE EFFECT
+        // Randomly cycles through characters before revealing final text
+        // ============================================
+        class TextScramble {
+            constructor(el) {
+                this.el = el;
+                this.chars = '!<>-_\/[]{}-=+*^?#________';
+                this.update = this.update.bind(this);
+            }
+            setText(newText) {
+                const oldText = this.el.innerText;
+                const length = Math.max(oldText.length, newText.length);
+                const promise = new Promise((resolve) => this.resolve = resolve);
+                this.queue = [];
+                for (let i = 0; i < length; i++) {
+                    const from = oldText[i] || '';
+                    const to = newText[i] || '';
+                    const start = Math.floor(Math.random() * 40);
+                    const end = start + Math.floor(Math.random() * 40);
+                    this.queue.push({ from, to, start, end });
+                }
+                cancelAnimationFrame(this.frameRequest);
+                this.frame = 0;
+                this.update();
+                return promise;
+            }
+            update() {
+                let output = '';
+                let complete = 0;
+                for (let i = 0, n = this.queue.length; i < n; i++) {
+                    let { from, to, start, end, char } = this.queue[i];
+                    if (this.frame >= end) {
+                        complete++;
+                        output += to;
+                    } else if (this.frame >= start) {
+                        if (!char || Math.random() < 0.28) {
+                            char = this.randomChar();
+                            this.queue[i].char = char;
+                        }
+                        output += `<span style="color: var(--accent)">${char}</span>`;
+                    } else {
+                        output += from;
+                    }
+                }
+                this.el.innerHTML = output;
+                if (complete === this.queue.length) {
+                    this.resolve();
+                } else {
+                    this.frameRequest = requestAnimationFrame(this.update);
+                    this.frame++;
+                }
+            }
+            randomChar() {
+                return this.chars[Math.floor(Math.random() * this.chars.length)];
+            }
+        }
+
+        // Initialize scramble effect
+        const scrambleEl = document.getElementById('scramble');
+        const fx = new TextScramble(scrambleEl);
+        const phrases = [
+            'SCROLL REVEALS...',
+            '3D TRANSFORMS...',
+            'PARALLAX DEPTH...',
+            'STAGGERED MOTION...',
+            'READY TO USE.'
+        ];
+        let counter = 0;
+        const next = () => {
+            fx.setText(phrases[counter]).then(() => {
+                setTimeout(next, 2000);
+            });
+            counter = (counter + 1) % phrases.length;
+        };
+        setTimeout(next, 2000);
+
+        // ============================================
+        // 6. INTERSECTION OBSERVER - SCROLL REVEALS
+        // The most important technique for modern web animation
+        // ============================================
+        const observerOptions = {
+            root: null,           // viewport
+            rootMargin: '0px',
+            threshold: 0.1        // trigger when 10% visible
+        };
+
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // Optional: unobserve after first reveal
+                    // observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with .reveal class
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Also observe stagger grid items
+        const staggerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.05 });
+
+        document.querySelectorAll('.stagger-item').forEach(el => {
+            staggerObserver.observe(el);
+        });
+
+        // Observe text reveal lines
+        const textRevealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        textRevealObserver.observe(document.getElementById('textRevealLines'));
+
+        // ============================================
+        // 7. PARALLAX SCROLLING
+        // Background moves slower than foreground
+        // ============================================
+        const parallaxBg = document.getElementById('parallaxBg');
+        const parallaxContainer = document.querySelector('.parallax-container');
+
+        window.addEventListener('scroll', () => {
+            const rect = parallaxContainer.getBoundingClientRect();
+            const scrolled = window.innerHeight - rect.top;
+            if (scrolled > 0 && rect.bottom > 0) {
+                // Move at 0.5x speed, creating depth
+                const yPos = -(scrolled * 0.5);
+                parallaxBg.style.transform = `translateY(${yPos}px)`;
+            }
+        });
+
+        // ============================================
+        // 8. MAGNETIC BUTTON EFFECT
+        // Button follows mouse slightly when hovering
+        // ============================================
+        const magneticBtn = document.getElementById('heroBtn');
+        magneticBtn.addEventListener('mousemove', (e) => {
+            const rect = magneticBtn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            magneticBtn.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+        });
+        magneticBtn.addEventListener('mouseleave', () => {
+            magneticBtn.style.transform = 'translate(0, 0)';
+        });
+
+        // ============================================
+        // 9. SMOOTH SCROLL FOR ANCHOR LINKS
+        // Already handled by CSS scroll-behavior: smooth
+        // This adds offset for fixed navbar
+        // ============================================
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80; // navbar height
+                    const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

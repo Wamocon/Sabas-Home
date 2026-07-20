@@ -1,0 +1,4 @@
+interface:
+  display_name: "Homepage Production"
+  short_description: "Verified strategy-to-homepage release workflow"
+  default_prompt: "Use $homepage-production to research, build, test, and prepare a client homepage for manual approval."
