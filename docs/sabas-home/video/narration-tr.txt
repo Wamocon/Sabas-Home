@@ -1,0 +1,40 @@
+# SCENE 1
+[curious] Alanya'da bir ev düşünün. Yeni alınmış, döşenmeyi bekliyor.
+[curious] Ama sahibi Türk değil; Rus, Alman ya da İngiliz. Ve mağazaya girdiğinde tek bir engel var: dil.
+[confident] Alanya'da otuz altı binden fazla yabancı yaşıyor, her yıl milyonlarca turist geliyor.
+[confident] Ama rakiplerin neredeyse tamamının web sitesi yalnızca Türkçe.
+[warm] İşte bu yüzden Sabaş Home için sıradan bir site değil; dört dilli, yapay zeka destekli bir dijital vitrin kurduk.
+[warm] Yirmi yılı aşan güveni, olduğu gibi ekrana taşıdık.
+[curious] Şimdi birlikte bakalım.
+
+# SCENE 2
+Karşınızda Sabaş Home'un yeni dijital vitrini.
+Yirmi yılı aşkın güven; beş mağaza, kırk bir marka. Hepsi ilk bakışta.
+Siteniz artık dört dilde: Türkçe, İngilizce, Rusça ve Almanca.
+İki bin beşten bu yana Alanya'da köklü bir aile şirketi.
+Müşterileriniz eve göre geziyor: beyaz eşya, mobilya, dekorasyon ve halı.
+Ve fark yaratan an: gerçek zamanlı üç boyut. Kumaşı canlı canlı değiştirin, döndürün.
+Kırk bir güvenilir marka, tek dokunuşla süzülür.
+Eksiksiz bir ev; seçilir, teslim edilir, kurulur.
+Beş mağaza; gerçek Google haritaları ve puanlarıyla, olduğu gibi.
+Yedi yirmi dört çalışan yapay zeka asistanınız, yalnızca sizin bilgilerinizle yanıt verir.
+Ve müşteriniz tek dokunuşla WhatsApp'tan size ulaşır.
+Hızlı, şık ve tamamen size ait. İşte Sabaş Home.
+
+# SCENE 2 — MOBİL
+Ve elbette, cebinizde de kusursuz.
+Aynı deneyim, her ekranda.
+
+# SCENE 3
+[warm] Gördüğünüz her şey gerçek: gerçek mağazalarınız, gerçek Google puanlarınız, gerçek markalarınız. Uydurma tek bir şey yok.
+[confident] Dört dil, akıllı asistan, gerçek zamanlı üç boyut ve tek dokunuşla WhatsApp. Hepsi tek bir sayfada.
+[warm] Yayına almaya hazır. [PLACEHOLDER: paket ve fiyat bilgisi buraya girilecek — uydurma yok]
+[confident] Bir sonraki adım basit: onayınızı verin, alan adını bağlayalım.
+[confident] Ve Sabaş Home'u Alanya'nın en iyi dijital vitrini yapalım.
+[warm] Evlerinize değer katan marka; artık dört dilde.
+
+# SCENE 3 — FİYATSIZ VARYANT
+[warm] Gördüğünüz her şey gerçek: gerçek mağazalarınız, gerçek Google puanlarınız, gerçek markalarınız. Uydurma tek bir şey yok.
+[confident] Dört dil, akıllı asistan, gerçek zamanlı üç boyut ve tek dokunuşla WhatsApp. Hepsi tek bir sayfada.
+[confident] Bir sonraki adım basit: onayınızı verin, alan adını bağlayalım ve yayına alalım.
+[warm] Evlerinize değer katan marka; artık dört dilde.

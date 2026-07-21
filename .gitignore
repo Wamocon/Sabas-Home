@@ -1,0 +1,12 @@
+# Secrets — never commit
+**/server/.env
+.env
+*.local
+
+# Scratch / research (not deliverables)
+.research/
+.tmp-shots/
+
+# Node
+node_modules/
+npm-debug.log*

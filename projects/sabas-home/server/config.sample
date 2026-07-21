@@ -1,0 +1,12 @@
+# Copy this file to server/.env and fill in your own values.
+# The AI_API_KEY must stay server-side only — never ship it in browser JavaScript.
+AI_API_URL=https://your-ai-host/api
+AI_API_KEY=your-secret-key-here
+AI_CHAT_COMPLETIONS_PATH=/chat/completions
+AI_MODEL_FAST=sokrates-fast
+AI_MODEL_REASONING=qwen3.6-35b
+AI_MODEL_GERMAN_COPY=gemma4-31b
+AI_MODEL_PRO=sokrates-pro
+PORT=4180
+# Optional: lock the API to a single site origin in production
+# ALLOW_ORIGIN=https://sabashome.com

@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "project": "Sabaş Home",
+    "url": "http://127.0.0.1:4180/?lang=tr",
+    "lang": "tr",
+    "langKey": "sabas-lang",
+    "scene": 2,
+    "fps": 60,
+    "width": 1920,
+    "height": 1080,
+    "note": "Single source of truth. record.mjs and the .srt are both generated from this. Times are absolute seconds from t0 (recorder start after trim offset). Every action helper is time-based (untilT)."
+  },
+  "cues": [
+    { "id": 1,  "t": 0.0,  "dur": 7.0, "tr": "Karşınızda Sabaş Home'un yeni dijital vitrini.",
+      "screen": "Hero görünür; başlık 'Evlerinize değer katar.'", "pointer": "Başlık üzerinde yavaş duraklama", "sel": ".hero h1", "act": "hold" },
+    { "id": 2,  "t": 7.0,  "dur": 6.5, "tr": "Yirmi yılı aşkın güven; beş mağaza, kırk bir marka. Hepsi ilk bakışta.",
+      "screen": "Güven rakamlarına odak (20+ / 5 / 41)", "pointer": "Rakamların üzerinden geçiş", "sel": ".hero-trust", "act": "sweep" },
+    { "id": 3,  "t": 13.5, "dur": 7.0, "tr": "Siteniz artık dört dilde: Türkçe, İngilizce, Rusça ve Almanca.",
+      "screen": "Dil menüsü açılır, dört dil görünür, kapanır", "pointer": "Dil düğmesine tıkla, menüyü göster", "sel": "#lang-toggle", "act": "openLangMenu" },
+    { "id": 4,  "t": 20.5, "dur": 7.0, "tr": "İki bin beşten bu yana Alanya'da köklü bir aile şirketi.",
+      "screen": "Kurumsal bölüme kaydır; mağaza fotoğrafları", "pointer": "Metin kenarında duruş", "sel": "#about", "act": "scrollTo" },
+    { "id": 5,  "t": 27.5, "dur": 9.5, "tr": "Müşterileriniz eve göre geziyor: beyaz eşya, mobilya, dekorasyon ve halı.",
+      "screen": "Yatay 'odaya göre' vitrini yatay kayar", "pointer": "Panellerin üzerinden sağa süzülme", "sel": "#collections", "act": "horizontalShowcase" },
+    { "id": 6,  "t": 37.0, "dur": 11.0, "tr": "Ve fark yaratan an: gerçek zamanlı üç boyut. Kumaşı canlı canlı değiştirin, döndürün.",
+      "screen": "3D koltuk; renk örnekleri değişir, koltuk döner", "pointer": "Örneklere tıkla, sahnede sürükle", "sel": "#showroom", "act": "configurator" },
+    { "id": 7,  "t": 48.0, "dur": 7.5, "tr": "Kırk bir güvenilir marka, tek dokunuşla süzülür.",
+      "screen": "Marka sekmeleri; ızgara filtrelenir", "pointer": "Sekmelere tıkla", "sel": "#brands", "act": "brandTabs" },
+    { "id": 8,  "t": 55.5, "dur": 6.0, "tr": "Eksiksiz bir ev; seçilir, teslim edilir, kurulur.",
+      "screen": "Sinematik ara bölüm (alacakaranlık ev)", "pointer": "Yok", "sel": ".band", "act": "scrollTo" },
+    { "id": 9,  "t": 61.5, "dur": 9.0, "tr": "Beş mağaza; gerçek Google haritaları ve puanlarıyla, olduğu gibi.",
+      "screen": "Mağaza kartları; canlı haritalar ve puanlar", "pointer": "Bir kartın üzerinde durak", "sel": "#stores", "act": "storesReveal" },
+    { "id": 10, "t": 70.5, "dur": 13.5, "tr": "Yedi yirmi dört çalışan yapay zeka asistanınız, yalnızca sizin bilgilerinizle yanıt verir.",
+      "screen": "Asistan açılır, soru yazılır, yanıt gelir", "pointer": "Asistanı aç, soruyu yaz", "sel": "#fab-ai", "act": "aiChat" },
+    { "id": 11, "t": 84.0, "dur": 8.0, "tr": "Ve müşteriniz tek dokunuşla WhatsApp'tan size ulaşır.",
+      "screen": "İletişim formu doldurulur; WhatsApp butonu", "pointer": "Formu doldur, WhatsApp'a yaklaş", "sel": "#contact", "act": "contactForm" },
+    { "id": 12, "t": 92.0, "dur": 6.5, "tr": "Hızlı, şık ve tamamen size ait. İşte Sabaş Home.",
+      "screen": "Alt bilgiye yumuşak kayış; logo", "pointer": "Yok", "sel": ".footer", "act": "scrollTo" }
+  ],
+  "mobile": [
+    { "id": 1, "t": 0.0, "dur": 6.0, "tr": "Ve elbette, cebinizde de kusursuz.", "screen": "Mobil ana ekran, kaydırma", "act": "mobileScroll" },
+    { "id": 2, "t": 6.0, "dur": 6.0, "tr": "Aynı deneyim, her ekranda.", "screen": "Mobil koleksiyon + iletişim", "act": "mobileScroll2" }
+  ]
+}
