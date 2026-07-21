@@ -9,9 +9,9 @@ VO language: **Turkish** (local business owner, non-technical) · Doc language: 
 | File | Spec | Verified |
 | --- | --- | --- |
 | `scene2.mp4` | 1920×1080, **60/1 CFR**, H.264 crf18, **95.000 s** (5700 frames), no audio | ffprobe + full `-f null` decode clean; all 12 cues extracted & viewed at corrected timing |
-| `mobile.mp4` | 1080×1920 portrait, 60/1 CFR, H.264, 12.0 s, no audio | decode clean; frame viewed (bottom bar present, cursor hidden, TR) |
-| `scene2.srt` / `scene2-mobile.srt` | 12 / 2 subtitles, generated from `cues.json` (single source of truth) | end = 95.0 s / 12.0 s |
-| `narration-tr.txt` | Text-only VO, `# SCENE n` headers + sentences, emotion tags kept | — |
+| `mobile.mp4` _(deferred)_ | 1080×1920 portrait, 60/1 CFR, H.264, 12.0 s, no audio | **Not in this cut** — desktop-only for now; asset retained in scratchpad if wanted later |
+| `scene2.srt` | 12 subtitles, generated from `cues.json` (single source of truth) | end = 95.0 s |
+| `narration-tr.txt` | Text-only VO — **3 scenes, desktop-only** (no mobile scene); Scene 3 is one clean cut with no pricing line | — |
 | `cues.json` | The one cue table driving both the SRT and `record.mjs` | — |
 | `record.mjs` | Self-recording harness (puppeteer-core + local Chrome) | draft + smoke + full all passed |
 | Raws (`raw.webm` ~594 MB, `raw-mobile.webm`) | VP9 33 Mbit/s, kept in scratchpad — **out of git** | — |
@@ -50,13 +50,14 @@ Force-TR: `localStorage["sabas-lang"]="tr"` set via `evaluateOnNewDocument` befo
 | "otuz altı binden fazla yabancı" (Scene 1) | 36,465 foreign residents Alanya 2024; MKT-02 |
 | "yapay zeka asistanı, sizin bilgilerinizle" | grounded proxy `server/ai-proxy.mjs`, live-tested; cue 10 shows a real answer listing the 5 actual stores + real WhatsApp (driven off-camera during setup, ~20 s latency, rendered with markdown-lite bold/bullets) |
 | 3D sofa | labelled on-screen "Temsili 3D görselleştirme, belirli bir ürün değildir" (representative, CC0 model); MED-20 |
-| Scene 3 pricing | **[PLACEHOLDER]** — no invented prices; a no-pricing cut variant is provided |
+| Scene 3 pricing | **Omitted** in the client-facing cut — no invented prices; add a real offer line only once client-confirmed |
+| ~~"teslim ve monte edilir" (delivery/install)~~ | **Removed from narration** (old cue 8) — delivery terms are BLOCKED in `fact-ledger.md`, not verified. ⚠️ The site's `.band` still asserts this in all 4 languages; confirm the service is real or soften the band copy |
 
 ## The 3-scene script
 See `narration-tr.txt` for the clean VO. Scene 2 cue table (timestamp · TR · 🎬 screen · 🖱️ pointer) is `cues.json` / `scene2.srt`.
 - **Scene 1** (avatar, ~40 s): hook (foreign homeowner + language barrier) → market numbers (36k residents, millions of tourists, rivals Turkish-only) → what was built (4-lang, AI, 3D) → handoff.
-- **Scene 2** (screen, 95.0 s): 12 cues in exact scroll order, ending with a footer finale + a 12 s mobile pickup.
-- **Scene 3** (avatar, ~40 s): recap (everything real) → offer `[PLACEHOLDER]` → next steps → CTA → brand line. **A pricing-free variant is included.**
+- **Scene 2** (screen, 95.0 s): 12 cues in exact scroll order, ending with a footer finale. (Desktop-only; mobile pickup deferred.)
+- **Scene 3** (avatar, ~40 s): recap (everything real) → the sum on one page → next steps (approve + connect the domain) → CTA → brand line. **One clean cut, no pricing line.**
 
 ## Executability review (the gate)
 Each cue's on-screen actions were summed (clicks ≥0.8 s, typing ~55 ms/char, smooth scrolls 1.2–1.6 s, AI latency measured live) and fit inside its slot with margin; the draft `--draft` run then confirmed **every cue fires within ±0.01 s** and each cue screenshot matched its expected state (hero, language menu open with 4 langs, About, horizontal scroller, 3D sofa + swatches, brand tabs, band, stores + maps, AI chat, filled form, footer).

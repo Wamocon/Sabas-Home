@@ -1,41 +1,27 @@
 # SCENE 1
-[curious] Alanya'da bir ev düşünün. Yeni alınmış, döşenmeyi bekliyor.
-[curious] Ama sahibi Türk değil; Rus, Alman ya da İngiliz. Ve mağazaya girdiğinde tek bir engel var: dil.
-[confident] Alanya'da otuz altı binden fazla yabancı yaşıyor, her yıl milyonlarca turist geliyor.
-[confident] Ama rakiplerin neredeyse tamamının web sitesi yalnızca Türkçe.
-[confident] Bu müşterilere kendi dillerinde ulaşan tek marka siz olun.
-[warm] İşte bu yüzden Sabaş Home için sıradan bir site değil; dört dilli, yapay zeka destekli bir dijital vitrin kurduk.
-[warm] Yirmi yılı aşan güveni, olduğu gibi ekrana taşıdık.
-[curious] Şimdi birlikte bakalım.
+[curious] Bir düşünün: Alanya'da yeni bir ev alınmış, kapısı henüz açılmış, içeride tek bir eşya yok. Sahibi buralı değil, yabancı; Rus, Alman ya da İngiliz.
+[curious] Mağazaya geliyor, gözü her şeyi beğeniyor; ama arada tek bir duvar var: dil. Anlatamıyor, soramıyor, çekinip çıkıyor.
+[confident] Oysa rakamlar apaçık. Alanya'da otuz altı bin dört yüz altmış beş kayıtlı yabancı sakin var, ilçenin yaklaşık yüzde onu; Ruslar yaklaşık yüzde otuz iki, Almanlar yüzde on bir, İngilizler yüzde sekiz.
+[confident] Üstüne, Antalya iki bin yirmi dörtte on yedi milyon iki yüz seksen bin ziyaretçi ağırladı. Rakiplerin neredeyse tamamı yalnızca Türkçe; onlara kendi dilinde ulaşan tek marka siz olabilirsiniz.
+[warm] İşte bu yüzden Sabaş Home için sıradan bir site değil, dört dilli, yapay zekâ destekli bir dijital vitrin kurduk; yirmi yıllık güveni ekrana olduğu gibi taşıdık.
+[warm] Gelin, birlikte bakalım.
 
 # SCENE 2
-Karşınızda Sabaş Home'un yeni dijital vitrini.
-Yirmi yılı aşkın güven; beş mağaza, kırk bir marka. Hepsi ilk bakışta.
-Siteniz artık dört dilde: Türkçe, İngilizce, Rusça ve Almanca.
+İşte Sabaş Home'un yeni dijital vitrini; yirmi yıllık güven, artık ekranda, olduğu gibi karşınızda.
+Yirmi yılı aşkın tecrübe, Alanya'da beş mağaza, kırk bir marka; hepsi tek bakışta.
+Site artık dört dil konuşuyor: Türkçe, İngilizce, Rusça ve Almanca; herkes kendi dilinde geziyor.
 İki bin beşten beri köklü bir aile şirketi; Evdego ve pazaryerleriyle tüm Türkiye'ye satıyor.
-Müşterileriniz eve göre geziyor: beyaz eşya, mobilya, dekorasyon ve halı.
-Ve fark yaratan an: gerçek zamanlı üç boyut. Kumaşı canlı canlı değiştirin, döndürün.
-Beko, İstikbal, Herend gibi kırk bir güvenilir marka; tek dokunuşla süzülür.
-Eksiksiz bir ev; seçilir, teslim edilir, kurulur.
-Beş mağaza; gerçek Google haritaları ve puanlarıyla, olduğu gibi.
-Yedi yirmi dört çalışan yapay zeka asistanınız, yalnızca sizin bilgilerinizle yanıt verir.
-Ve müşteriniz tek dokunuşla WhatsApp'tan size ulaşır.
-Hızlı, şık ve tamamen size ait. İşte Sabaş Home.
-
-# SCENE 2 — MOBİL
-Ve elbette, cebinizde de kusursuz.
-Aynı deneyim, her ekranda.
+Müşteriler odaya ve ihtiyaca göre geziyor: beyaz eşya, mobilya, dekorasyon ve halı; ne arıyorsa doğru bölüme kolayca ulaşıyor.
+İşte sizi farklı kılan an: gerçek zamanlı üç boyut; kumaşı canlı canlı değiştirin, ürünü elinizdeymiş gibi döndürün.
+Beko, İstikbal, Herend ve kırk bir güvenilir marka, hepsi bir arada.
+Eksiksiz bir ev: her parçası, tek bir yerden, özenle seçilir.
+Beş mağaza, gerçek Google haritaları ve puanlarıyla, tam olarak olduğu gibi ekranınızda.
+Gece gündüz çalışan yapay zekâ asistanınız, yalnızca sizin kendi bilgilerinizle yanıt verir; uydurma yok, sadece Sabaş Home.
+Ve müşteriniz size WhatsApp'tan tek dokunuşla ulaşır.
+Sade, zarif ve tamamen size ait. İşte bu, Sabaş Home.
 
 # SCENE 3
-[warm] Gördüğünüz her şey gerçek: gerçek mağazalarınız, gerçek Google puanlarınız, gerçek markalarınız. Uydurma tek bir şey yok.
-[confident] Dört dil, akıllı asistan, gerçek zamanlı üç boyut ve tek dokunuşla WhatsApp. Hepsi tek bir sayfada.
-[warm] Yayına almaya hazır. [PLACEHOLDER: paket ve fiyat bilgisi buraya girilecek — uydurma yok]
-[confident] Bir sonraki adım basit: onayınızı verin, alan adını bağlayalım.
-[confident] Ve Sabaş Home'u Alanya'nın en iyi dijital vitrini yapalım.
-[warm] Evlerinize değer katan marka; artık dört dilde.
-
-# SCENE 3 — FİYATSIZ VARYANT
-[warm] Gördüğünüz her şey gerçek: gerçek mağazalarınız, gerçek Google puanlarınız, gerçek markalarınız. Uydurma tek bir şey yok.
-[confident] Dört dil, akıllı asistan, gerçek zamanlı üç boyut ve tek dokunuşla WhatsApp. Hepsi tek bir sayfada.
-[confident] Bir sonraki adım basit: onayınızı verin, alan adını bağlayalım ve yayına alalım.
-[warm] Evlerinize değer katan marka; artık dört dilde.
+[warm] Şimdi durup şunu söyleyeyim: ekranda gördüğünüz her şey gerçek. Gerçek mağazalar, gerçek Google puanları, gerçek markalar; tek bir şey bile uydurulmadı.
+[confident] Ve hepsi tek bir sayfada buluşuyor: dört dil, akıllı asistan, gerçek zamanlı üç boyut ve tek dokunuşla WhatsApp.
+[warm] Sıradaki adım çok basit: onayınızı verin, alan adını bağlayalım.
+[confident] Gelin, Sabaş Home'u Alanya'nın en iyi dijital vitrini yapalım. Evlerinize değer katan marka; artık dört dilde.
