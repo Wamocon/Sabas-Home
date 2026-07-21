@@ -1,0 +1,9 @@
+{
+  "functions": {
+    "api/chat.js": { "maxDuration": 60 }
+  },
+  "rewrites": [
+    { "source": "/", "destination": "/projects/sabas-home/index.html" },
+    { "source": "/(.*)", "destination": "/projects/sabas-home/$1" }
+  ]
+}
