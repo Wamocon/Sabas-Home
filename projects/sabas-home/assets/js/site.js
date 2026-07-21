@@ -215,7 +215,9 @@
     /* ---------- Smooth scrolling (Lenis) synced with GSAP ScrollTrigger ---------- */
     let lenis = null;
     if (window.Lenis && !reduce) {
-      lenis = new window.Lenis({ duration: 1.1, easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), smoothWheel: true, touchMultiplier: 1.5 });
+      // lerp-based: interpolates toward the target every animation frame, so it runs at the
+      // display's refresh rate (60/120/144Hz) and tracks the wheel tightly = snappy + smooth.
+      lenis = new window.Lenis({ lerp: 0.12, wheelMultiplier: 1, smoothWheel: true, syncTouch: true, touchMultiplier: 1.7 });
       if (gsap && gsap.ticker) {
         lenis.on("scroll", () => { if (window.ScrollTrigger) window.ScrollTrigger.update(); });
         gsap.ticker.add((time) => lenis.raf(time * 1000));
@@ -417,10 +419,19 @@
       chatPanel.setAttribute("aria-hidden", "true");
       fabAi && fabAi.setAttribute("aria-expanded", "false");
     }
+    function escHtml(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+    function formatBot(text) {
+      let s = escHtml(text).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+      return s.split("\n").map((line) => {
+        const m = line.match(/^\s*[\*\-]\s+(.*)$/);
+        return m ? ("&bull;&nbsp;" + m.at(1)) : line;
+      }).join("<br>");
+    }
     function appendMsg(text, who) {
       const div = document.createElement("div");
       div.className = "chat-msg " + who;
-      div.textContent = text;
+      if (who === "bot") div.innerHTML = formatBot(text);
+      else div.textContent = text;
       chatLog.appendChild(div);
       chatLog.scrollTop = chatLog.scrollHeight;
       return div;

@@ -3,6 +3,7 @@
 [curious] Ama sahibi Türk değil; Rus, Alman ya da İngiliz. Ve mağazaya girdiğinde tek bir engel var: dil.
 [confident] Alanya'da otuz altı binden fazla yabancı yaşıyor, her yıl milyonlarca turist geliyor.
 [confident] Ama rakiplerin neredeyse tamamının web sitesi yalnızca Türkçe.
+[confident] Bu müşterilere kendi dillerinde ulaşan tek marka siz olun.
 [warm] İşte bu yüzden Sabaş Home için sıradan bir site değil; dört dilli, yapay zeka destekli bir dijital vitrin kurduk.
 [warm] Yirmi yılı aşan güveni, olduğu gibi ekrana taşıdık.
 [curious] Şimdi birlikte bakalım.
@@ -11,10 +12,10 @@
 Karşınızda Sabaş Home'un yeni dijital vitrini.
 Yirmi yılı aşkın güven; beş mağaza, kırk bir marka. Hepsi ilk bakışta.
 Siteniz artık dört dilde: Türkçe, İngilizce, Rusça ve Almanca.
-İki bin beşten bu yana Alanya'da köklü bir aile şirketi.
+İki bin beşten beri köklü bir aile şirketi; Evdego ve pazaryerleriyle tüm Türkiye'ye satıyor.
 Müşterileriniz eve göre geziyor: beyaz eşya, mobilya, dekorasyon ve halı.
 Ve fark yaratan an: gerçek zamanlı üç boyut. Kumaşı canlı canlı değiştirin, döndürün.
-Kırk bir güvenilir marka, tek dokunuşla süzülür.
+Beko, İstikbal, Herend gibi kırk bir güvenilir marka; tek dokunuşla süzülür.
 Eksiksiz bir ev; seçilir, teslim edilir, kurulur.
 Beş mağaza; gerçek Google haritaları ve puanlarıyla, olduğu gibi.
 Yedi yirmi dört çalışan yapay zeka asistanınız, yalnızca sizin bilgilerinizle yanıt verir.

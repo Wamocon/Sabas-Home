@@ -62,8 +62,11 @@ html.lenis, html.lenis body { height: auto; }
 
 /* ---------- Reset / base ---------- */
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; overscroll-behavior-y: none; }
 html.no-js .reveal { opacity: 1; }
+/* isolate card layout so hovers & reveals don't trigger page-wide recalc during scroll
+   (layout only — NOT paint, which would clip the cards' outer hover shadows) */
+.cat-card, .store-card, .brand-cell, .hscroll-panel, .contact-item { contain: layout; }
 body {
   margin: 0;
   font-family: var(--font-body);
@@ -164,9 +167,9 @@ em, .accent-serif { font-style: italic; color: var(--amber-deep); font-family: v
 .site-header {
   position: fixed; inset: 0 0 auto 0; z-index: 1200;
   padding: 16px 0;
-  background: rgba(251, 248, 243, 0.7);
-  backdrop-filter: saturate(160%) blur(18px);
-  -webkit-backdrop-filter: saturate(160%) blur(18px);
+  background: rgba(251, 248, 243, 0.72);
+  backdrop-filter: saturate(150%) blur(11px);
+  -webkit-backdrop-filter: saturate(150%) blur(11px);
   border-bottom: 1px solid transparent;
   transition: padding var(--dur) var(--ease), background-color var(--dur) var(--ease), border-color var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
 }
@@ -714,12 +717,16 @@ body.menu-open .burger span:nth-child(3) { transform: translateY(-6px) rotate(-4
 .chat-input button:hover { background: var(--amber-deep); }
 .chat-input button svg { width: 20px; height: 20px; }
 
-/* ---------- Film grain texture (premium tactile finish) ---------- */
+/* ---------- Film grain texture (premium tactile finish) ----------
+   No mix-blend-mode: a blended fixed overlay forces the browser to re-composite against the
+   scrolling content every frame (scroll jank). A plain low-opacity overlay is a single static
+   GPU layer that never repaints while scrolling — keeps the texture, frees the frame budget. */
 body::after {
   content: ""; position: fixed; inset: 0; z-index: 6; pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  background-size: 180px 180px;
-  opacity: 0.05; mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+  opacity: 0.028;
+  will-change: transform;
 }
 
 /* ---------- Hero pointer spotlight ---------- */

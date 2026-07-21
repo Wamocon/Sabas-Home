@@ -8,13 +8,13 @@ VO language: **Turkish** (local business owner, non-technical) · Doc language: 
 
 | File | Spec | Verified |
 | --- | --- | --- |
-| `scene2.mp4` | 1920×1080, **60/1 CFR**, H.264 crf16, **98.500 s**, no audio, +faststart | ffprobe + full `-f null` decode clean; 6 key frames extracted & viewed |
+| `scene2.mp4` | 1920×1080, **60/1 CFR**, H.264 crf18, **95.000 s** (5700 frames), no audio | ffprobe + full `-f null` decode clean; all 12 cues extracted & viewed at corrected timing |
 | `mobile.mp4` | 1080×1920 portrait, 60/1 CFR, H.264, 12.0 s, no audio | decode clean; frame viewed (bottom bar present, cursor hidden, TR) |
-| `scene2.srt` / `scene2-mobile.srt` | 12 / 2 subtitles, generated from `cues.json` (single source of truth) | end = 98.5 s / 12.0 s |
+| `scene2.srt` / `scene2-mobile.srt` | 12 / 2 subtitles, generated from `cues.json` (single source of truth) | end = 95.0 s / 12.0 s |
 | `narration-tr.txt` | Text-only VO, `# SCENE n` headers + sentences, emotion tags kept | — |
 | `cues.json` | The one cue table driving both the SRT and `record.mjs` | — |
 | `record.mjs` | Self-recording harness (puppeteer-core + local Chrome) | draft + smoke + full all passed |
-| Raws (`raw.webm` 483 MB, `raw-mobile.webm`) | VP9 33 Mbit/s, kept in scratchpad — **out of git** | — |
+| Raws (`raw.webm` ~594 MB, `raw-mobile.webm`) | VP9 33 Mbit/s, kept in scratchpad — **out of git** | — |
 
 Only **Scene 2** is a screen recording. **Scene 1 & 3 are avatar scenes** (voiceover only) — no recording needed; generate them in the avatar tool.
 
@@ -28,7 +28,11 @@ node record.mjs --draft            # headless, screenshots every cue + timing lo
 node record.mjs --capture --smoke  # 2-cue desktop smoke self-capture
 node record.mjs --capture          # full desktop take -> raw.webm
 node record.mjs --capture --mobile # mobile pickup -> raw-mobile.webm
-# post: see the two ffmpeg passes in the handover (trim offset from sidecar.json, tpad clone, pad to 1080, -t <SRT end>)
+# post (2 passes; trim offset + captured span from sidecar.json / probe):
+#   1) ffmpeg -ss <trimOffset> -i raw.webm -vf "fps=60,scale=1920:1080:force_original_aspect_ratio=decrease,pad=1920:1080:(ow-iw)/2:(oh-ih)/2,setsar=1" -crf 18 -pix_fmt yuv420p -an tmp-cfr.mp4
+#   2) ffmpeg -i tmp-cfr.mp4 -vf "setpts=(<SRTend>/<tmp-cfr dur>)*PTS,fps=60,setsar=1" -r 60 -an -t <SRTend> -crf 18 -pix_fmt yuv420p scene2.mp4
+# NOTE: getDisplayMedia/MediaRecorder time-COMPRESSES under load (raw spans ~91 s of PTS for 95 s of on-screen action).
+# Pass 2 time-STRETCHES the real content back to the SRT end so every cue lands on its planned time (do NOT tpad-freeze — that hides the drift).
 ```
 
 ## Section map (real scroll order · CSS selectors)
@@ -44,14 +48,14 @@ Force-TR: `localStorage["sabas-lang"]="tr"` set via `evaluateOnNewDocument` befo
 | "dört dil (TR/EN/RU/DE)" | i18n dict, 140 keys × 4; site-config.js |
 | "gerçek Google haritaları ve puanları" | real embeds + verified ratings Oba 4.5 / Gazipaşa 4.6 / Güllerpınarı 4.4 / Mahmutlar 4.6 / Alaiye new; ID-ST-1..5 |
 | "otuz altı binden fazla yabancı" (Scene 1) | 36,465 foreign residents Alanya 2024; MKT-02 |
-| "yapay zeka asistanı, sizin bilgilerinizle" | grounded proxy `server/ai-proxy.mjs`, live-tested |
+| "yapay zeka asistanı, sizin bilgilerinizle" | grounded proxy `server/ai-proxy.mjs`, live-tested; cue 10 shows a real answer listing the 5 actual stores + real WhatsApp (driven off-camera during setup, ~20 s latency, rendered with markdown-lite bold/bullets) |
 | 3D sofa | labelled on-screen "Temsili 3D görselleştirme, belirli bir ürün değildir" (representative, CC0 model); MED-20 |
 | Scene 3 pricing | **[PLACEHOLDER]** — no invented prices; a no-pricing cut variant is provided |
 
 ## The 3-scene script
 See `narration-tr.txt` for the clean VO. Scene 2 cue table (timestamp · TR · 🎬 screen · 🖱️ pointer) is `cues.json` / `scene2.srt`.
 - **Scene 1** (avatar, ~40 s): hook (foreign homeowner + language barrier) → market numbers (36k residents, millions of tourists, rivals Turkish-only) → what was built (4-lang, AI, 3D) → handoff.
-- **Scene 2** (screen, 98.5 s): 12 cues in exact scroll order, ending with a footer finale + a 12 s mobile pickup.
+- **Scene 2** (screen, 95.0 s): 12 cues in exact scroll order, ending with a footer finale + a 12 s mobile pickup.
 - **Scene 3** (avatar, ~40 s): recap (everything real) → offer `[PLACEHOLDER]` → next steps → CTA → brand line. **A pricing-free variant is included.**
 
 ## Executability review (the gate)

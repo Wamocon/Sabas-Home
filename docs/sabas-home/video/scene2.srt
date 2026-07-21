@@ -12,7 +12,7 @@ Siteniz artık dört dilde: Türkçe, İngilizce, Rusça ve Almanca.
 
 4
 00:00:20,500 --> 00:00:27,500
-İki bin beşten bu yana Alanya'da köklü bir aile şirketi.
+İki bin beşten beri köklü bir aile şirketi; Evdego ve pazaryerleriyle tüm Türkiye'ye satıyor.
 
 5
 00:00:27,500 --> 00:00:37,000
@@ -24,7 +24,7 @@ Ve fark yaratan an: gerçek zamanlı üç boyut. Kumaşı canlı canlı değişt
 
 7
 00:00:48,000 --> 00:00:55,500
-Kırk bir güvenilir marka, tek dokunuşla süzülür.
+Beko, İstikbal, Herend gibi kırk bir güvenilir marka; tek dokunuşla süzülür.
 
 8
 00:00:55,500 --> 00:01:01,500
@@ -35,14 +35,13 @@ Eksiksiz bir ev; seçilir, teslim edilir, kurulur.
 Beş mağaza; gerçek Google haritaları ve puanlarıyla, olduğu gibi.
 
 10
-00:01:10,500 --> 00:01:24,000
+00:01:10,500 --> 00:01:20,500
 Yedi yirmi dört çalışan yapay zeka asistanınız, yalnızca sizin bilgilerinizle yanıt verir.
 
 11
-00:01:24,000 --> 00:01:32,000
+00:01:20,500 --> 00:01:28,500
 Ve müşteriniz tek dokunuşla WhatsApp'tan size ulaşır.
 
 12
-00:01:32,000 --> 00:01:38,500
+00:01:28,500 --> 00:01:35,000
 Hızlı, şık ve tamamen size ait. İşte Sabaş Home.
-
